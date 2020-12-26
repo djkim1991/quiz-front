@@ -12,3 +12,11 @@ div.footer { background-color: #DDD; height: 100px; text-align: left; padding: 1
 
 div.gnb > div.back-icon { position: fixed; top: 0px; left: 0px; font-size: 30px; height: 60px; width: 60px; padding: 15px; cursor: pointer; }
 div.gnb > span.logo { font-size: 30px; line-height: 55px; }
+
+div.btn-type1 { padding: 20vw 0; }
+div.btn-type1 button { font-size: 6vw; color: #FFF; background-color: orangered; padding: 6vw 12vw; font-weight: 900; color: #FFF; border-radius: 1vw; }
+
+@media screen and (min-width:600px){
+    div.btn-type1 { padding: 120px 0; }
+    div.btn-type1 button { padding: 36px 72px; border-radius: 6px; font-size: 36px; }
+}
