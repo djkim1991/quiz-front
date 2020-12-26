@@ -1,11 +1,11 @@
 div.home div.logo { width: 100%; max-width: 600px; padding: 20vw 0; }
 div.home div.logo img { width: 80vw; }
 div.home div.create-quiz-btn { padding: 20vw 0; }
-div.home div.create-quiz-btn a { background-color: lightcoral; color: #444; padding: 6vw 12vw; font-size: 6vw; font-weight: 900; color: #FFF; border-radius: 1vw; }
+div.home div.create-quiz-btn button { font-size: 6vw; color: #FFF; background-color: lightcoral; padding: 6vw 12vw; font-weight: 900; color: #FFF; border-radius: 1vw; }
 
 @media screen and (min-width:600px){
     div.home div.logo { padding: 120px 0; }
     div.home div.logo img { width: 480px; }
     div.home div.create-quiz-btn { padding: 120px 0; }
-    div.home div.create-quiz-btn a { padding: 36px 72px; font-size: 36px; border-radius: 6px; }
+    div.home div.create-quiz-btn button { padding: 36px 72px; border-radius: 6px; font-size: 36px; }
 }

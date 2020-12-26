@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-* { font-family: 'Noto Sans KR', sans-serif; color: #444; font-size: 18px; text-decoration: none; }
+a, span { font-family: 'Noto Sans KR', sans-serif; color: #444; font-size: 18px; text-decoration: none; }
+button { border: none; }
 div { box-sizing: border-box; }
 html, body, div#root, div.layout, div.main { margin: 0; padding: 0; width: 100%; min-height: 100vh; }
 div#root { background-color: #EEE; text-align: center; }
@@ -9,4 +10,5 @@ div.gnb { position: fixed; top: 0; left: 50%; transform: translateX(-50%); font-
 div.main { padding-top: 60px; max-width: 600px; background-color: #FFF; }
 div.footer { background-color: #DDD; height: 100px; text-align: left; padding: 10px; }
 
+div.gnb > div.back-icon { position: fixed; top: 0px; left: 0px; font-size: 30px; height: 60px; width: 60px; padding: 15px; cursor: pointer; }
 div.gnb > span.logo { font-size: 30px; line-height: 55px; }

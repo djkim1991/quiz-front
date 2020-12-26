@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import Link from "../../../common/navi/Link";
 
 function CreateQuizBtn() {
   return (
     <div className="create-quiz-btn">
       <Link to="/createQuiz">
-          퀴즈 만들기
+        퀴즈 만들기
       </Link>
     </div>
   );
