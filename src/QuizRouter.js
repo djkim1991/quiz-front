@@ -7,12 +7,14 @@ import PageNorFound from "./components/errors/PageNotFound";
 
 function QuizRouter() {
   return (
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/createQuiz" component={CreateQuiz} />
-      <Route path="/startQuiz" component={StartQuiz} />
-      <Route path="/" component={PageNorFound} />
-    </Switch>
+    <div className="main">
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/createQuiz" component={CreateQuiz} />
+        <Route path="/startQuiz" component={StartQuiz} />
+        <Route path="/" component={PageNorFound} />
+      </Switch>
+    </div>
   );
 }
 
