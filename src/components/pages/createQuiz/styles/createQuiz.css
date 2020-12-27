@@ -9,7 +9,7 @@ div.question-count div.left-arrow-icon.disabled { color: #FFF; }
 div.question-count div.count { background-color: orangered; width: 20vw; height: 20vw; border-radius: 1vw; }
 div.question-count div.count span { font-size: 12vw; color: #FFF; font-weight: 900; }
 
-@media screen and (min-width:600px){
+@media screen and (min-width:600px) {
     div.create-quiz-step1 div.title { padding: 120px 0; }
     div.create-quiz-step1 div.title span { font-size: 30px; }
 
@@ -18,5 +18,17 @@ div.question-count div.count span { font-size: 12vw; color: #FFF; font-weight: 9
     div.question-count div.left-arrow-icon { font-size: 42px; }
     div.question-count div.count { width: 120px; height: 120px; border-radius: 6px; }
     div.question-count div.count span { font-size: 72px; }
+}
 
+div.question-input { background-color: #EEE; padding: 1vw 0; }
+div.question-input textarea { box-sizing: border-box; width: 80vw; height: 40vw; text-align: center; padding-top: 8vw; font-size: 5vw; }
+div.answer-inputs { background-color: #ccc; text-align: center; }
+div.answer-input { display: inline-block; width: 80vw; height: 20vw; padding: 2vw 0; }
+div.answer-input input { box-sizing: border-box; width: 80vw; height: 16vw; padding-left: 15vw; font-size: 4vw; }
+
+@media screen and (min-width:600px) {
+    div.question-input { padding: 6px 0; }
+    div.question-input textarea { width: 480px; height: 240px; padding-top: 48px; font-size: 30px; }
+    div.answer-input { width: 480px; height: 120px; padding: 12px 0; }
+    div.answer-input input { width: 480px; height: 96px; padding-left: 90px; font-size: 24px; }
 }

@@ -8,15 +8,12 @@ class QuestionInput extends Component {
       question: '',
     };
 
-    this.maxLength = 30;
+    this.maxLength = 50;
   }
 
   handleChange(e) {
-    const question = e.target.value;
-
-    if (question.length < this.maxLength) {
-      this.setState({question});
-    }
+    const question = e.target.value.substr(0, this.maxLength);
+    this.setState({question});
   }
 
   render() {
