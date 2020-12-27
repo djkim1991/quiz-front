@@ -35,7 +35,7 @@ class QuestionCount extends Component {
       <div className="question-count">
         <LeftArrowIcon disabled={quizCount <= this.minQuizCount}
                        handleClick={this.decreaseCount.bind(this)} />
-        <div className="count">{quizCount}</div>
+        <div className="count"><span>{quizCount}</span></div>
         <RightArrowIcon disabled={quizCount >= this.maxQuizCount}
                         handleClick={this.increaseCount.bind(this)} />
       </div>

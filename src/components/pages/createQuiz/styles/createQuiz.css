@@ -1,20 +1,22 @@
 div.create-quiz-step1 div.title { padding: 20vw 0; }
-div.create-quiz-step1 div.title span { font-size: 6vw; font-weight: 700; }
+div.create-quiz-step1 div.title span { font-size: 5vw; font-weight: 700; }
 
 div.question-count { display: flex; justify-content: center; align-items: center; padding: 0 0 20vw 0; }
 div.question-count div.right-arrow-icon,
-div.question-count div.left-arrow-icon { font-size: 10vw; color: orangered; }
+div.question-count div.left-arrow-icon { font-size: 7vw; color: orangered; }
 div.question-count div.right-arrow-icon.disabled,
 div.question-count div.left-arrow-icon.disabled { color: #FFF; }
-div.question-count div.count { font-size: 25vw; background-color: orangered; width: 30vw; height: 30vw; border-radius: 1vw; color: #FFF; }
+div.question-count div.count { background-color: orangered; width: 20vw; height: 20vw; border-radius: 1vw; }
+div.question-count div.count span { font-size: 12vw; color: #FFF; font-weight: 900; }
 
 @media screen and (min-width:600px){
     div.create-quiz-step1 div.title { padding: 120px 0; }
-    div.create-quiz-step1 div.title span { font-size: 36px; }
+    div.create-quiz-step1 div.title span { font-size: 30px; }
 
     div.question-count { padding: 0 0 120px 0; }
     div.question-count div.right-arrow-icon,
-    div.question-count div.left-arrow-icon { font-size: 60px; }
-    div.question-count div.count { font-size: 150px; width: 180px; height: 180px; border-radius: 6px; }
+    div.question-count div.left-arrow-icon { font-size: 42px; }
+    div.question-count div.count { width: 120px; height: 120px; border-radius: 6px; }
+    div.question-count div.count span { font-size: 72px; }
 
 }

@@ -10,7 +10,7 @@ function RightArrowIcon(props) {
   };
 
   return (
-    <div className={`right-arrow-icon ${props.disabled ? 'disabled' : ''}`} onClick={handleClick}>
+    <div className={`icon right-arrow-icon ${props.disabled ? 'disabled' : ''}`} onClick={handleClick}>
       <BiRightArrow />
     </div>
   );

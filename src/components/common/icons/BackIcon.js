@@ -10,7 +10,7 @@ function BackIcon(props) {
   };
 
   return (
-    <div className="back-icon" onClick={handleClick}>
+    <div className="icon back-icon" onClick={handleClick}>
       <IoChevronBackSharp />
     </div>
   );
