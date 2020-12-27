@@ -7,17 +7,16 @@ html, body, div#root, div.layout, div.main { margin: 0; padding: 0; width: 100%;
 div#root { background-color: #EEE; text-align: center; }
 div.layout, div.gnb, div.footer { width: 100%; max-width: 600px; }
 div.layout { display: inline-block; border: 1px solid #CCC; }
-div.gnb { position: fixed; top: 0; left: 50%; transform: translateX(-50%); font-weight: 700; height: 60px; border: 1px solid #CCC; border-bottom: 1px solid #444;  background-color: #FFF; }
-div.main { padding-top: 60px; max-width: 600px; background-color: #FFF; }
+div.gnb { position: fixed; top: 0; left: 50%; transform: translateX(-50%); font-weight: 700; height: 60px; border: 1px solid #CCC; border-bottom: 1px solid #444;  background-color: #FFF; z-index: 10; }
+div.main { position: relative; padding-top: 60px; max-width: 600px; background-color: #FFF; }
 div.footer { background-color: #DDD; height: 100px; text-align: left; padding: 10px; }
 
 div.gnb > div.back-icon { position: fixed; top: 0px; left: 0px; font-size: 30px; height: 60px; width: 60px; padding: 15px; cursor: pointer; z-index: 100; }
 div.gnb > span.logo { font-size: 20px; line-height: 55px; }
 
 /*버튼-01*/
-div.btn-type1 { padding: 15vw 0 0 0; }
-div.btn-type1 button { font-size: 4vw; color: #FFF; background-color: orangered; padding: 4vw 8vw; font-weight: 900; color: #FFF; border-radius: 1vw; }
+div.btn-type1 { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); width: 100%; max-width: 600px; }
+div.btn-type1 button { font-size: 4vw; color: #FFF; background-color: orangered; width: 80%; height: 17vw; font-weight: 900; color: #FFF; border-radius: 1vw; }
 @media screen and (min-width:600px){
-    div.btn-type1 { padding: 90px 0; }
-    div.btn-type1 button { padding: 24px 48px; border-radius: 6px; font-size: 24px; }
+    div.btn-type1 button { height: 102px; border-radius: 6px; font-size: 24px; }
 }
