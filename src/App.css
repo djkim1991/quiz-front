@@ -20,3 +20,10 @@ div.btn-type1 button { font-size: 4vw; color: #FFF; background-color: orangered;
 @media screen and (min-width:600px){
     div.btn-type1 button { height: 102px; border-radius: 6px; font-size: 24px; }
 }
+
+/*버튼-02*/
+div.btn-type2 { display: flex; justify-content: center; position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); width: 100%; max-width: 600px; }
+div.btn-type2 button { font-size: 4vw; color: #FFF; background-color: orangered; width: 39vw; margin: 0 1vw 0 1vw; height: 17vw; font-weight: 900; color: #FFF; border-radius: 1vw; }
+@media screen and (min-width:600px){
+    div.btn-type2 button { height: 102px; border-radius: 6px; font-size: 24px; width: 234px; margin: 0 6px 0 6px; }
+}
