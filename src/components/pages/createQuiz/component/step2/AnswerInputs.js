@@ -2,12 +2,15 @@ import React from 'react';
 import AnswerInput from "./AnswerInput";
 
 function AnswerInputs(props) {
-  const answerNums = [1, 2, 3, 4];
+  const { quizAnswers } = props;
 
   return (
     <div className="answer-inputs">
       {
-        answerNums.map((answerNum, idx) => <AnswerInput key={idx} answerNum={answerNum} />)
+        quizAnswers.map((quizAnswer, idx) =>
+          <AnswerInput key={idx}
+                       quizAnswer={quizAnswer}
+                       handleChange={props.handleChange} />)
       }
     </div>
   );

@@ -1,12 +1,12 @@
 import React from 'react';
 
 function PrevNextBtn(props) {
-  const { quizLength } = props;
+  const { quizLength, quizCursor } = props;
 
   return (
     <div className="btn-type2">
-      <button onClick={() => props.handleSubmit()}>이전(1/{quizLength})</button>
-      <button onClick={() => props.handleSubmit()}>다음(1/{quizLength})</button>
+      <button onClick={() => props.handleClickPrev()}>이 전</button>
+      <button onClick={() => props.handleClickNext()}>다 음</button>
     </div>
   );
 }

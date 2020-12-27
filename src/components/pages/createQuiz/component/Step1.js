@@ -8,10 +8,9 @@ class Step1 extends Component {
     super(props);
 
     this.state = {
-      quizLength: 1,
+      quizLength: props.quizLength,
     };
   }
-
 
   increaseQuizLength() {
     const { quizLength } = this.state;

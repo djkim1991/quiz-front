@@ -1,32 +1,22 @@
-import React, { Component } from 'react';
+import React  from 'react';
 
-class QuestionInput extends Component {
-  constructor(props) {
-    super(props);
+function QuestionInput(props) {
+  const maxLength = 50;
 
-    this.state = {
-      question: '',
-    };
-
-    this.maxLength = 50;
+  const handleChange = (e) => {
+    const displayText = e.target.value.substr(0, maxLength);
+    props.handleChange(displayText);
   }
 
-  handleChange(e) {
-    const question = e.target.value.substr(0, this.maxLength);
-    this.setState({question});
-  }
+  const { displayText } = props;
 
-  render() {
-    const { question } = this.state;
-
-    return (
-      <div className="question-input">
-        <textarea placeholder="질문을 입력해 주세요."
-                  value={question}
-                  onChange={this.handleChange.bind(this)} />
-      </div>
-    );
-  }
+  return (
+    <div className="question-input">
+      <textarea placeholder="질문을 입력해 주세요."
+                value={displayText}
+                onChange={handleChange} />
+    </div>
+  );
 }
 
 export default QuestionInput;

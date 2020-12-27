@@ -2,12 +2,21 @@ import React from 'react';
 import CheckboxIcon from "../../../../common/icons/CheckboxIcon";
 
 function AnswerInput(props) {
-  const answerNum = props.answerNum || 0;
+  const { displayText, displayOrder, answerYn } = props.quizAnswer;
+  const maxLength = 30;
+
+  const handleChange = (e) => {
+    const displayText = e.target.value.substr(0, maxLength);
+    props.handleChange(displayOrder, displayText);
+  };
 
   return (
-    <div className="answer-input">
+    <div className={`answer-input ${answerYn ? 'on' : ''}`}>
       <CheckboxIcon />
-      <input type="text" placeholder={`${answerNum}번 보기를 입력해 주세요.`} />
+      <input type="text"
+             value={displayText}
+             onChange={handleChange}
+             placeholder={`${displayOrder}번 보기를 입력해 주세요.`} />
     </div>
   );
 }

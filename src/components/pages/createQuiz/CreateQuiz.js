@@ -10,24 +10,43 @@ class CreateQuiz extends Component {
     this.state = {
       step: 1,
       quizLength: 1,
+      quizQuestions: [],
     };
   }
 
-  submitStep1(quizLength) {
-    this.setState({ step: 2, quizLength });
+  renderStep1() {
+    this.setState({ step: 1 });
   }
 
-  submitStep2() {
+  renderStep2(quizLength) {
+    const quizQuestions = Array.from({ length: quizLength }, (_, idx) => ({
+      displayText: '',
+      displayOrder: (idx+1),
+      quizAnswers: [
+        { displayText: '', displayOrder: 1, answerYn: false },
+        { displayText: '', displayOrder: 2, answerYn: false },
+        { displayText: '', displayOrder: 3, answerYn: false },
+        { displayText: '', displayOrder: 4, answerYn: false },
+      ]
+    }));
+
+    this.setState({ step: 2, quizLength, quizQuestions });
+  }
+
+  renderStep3() {
     this.setState({ step: 3 });
   }
 
   render() {
-    const { step, quizLength } = this.state;
+    const { step, quizLength, quizQuestions } = this.state;
     if (step === 1) {
-      return <Step1 handleSubmit={this.submitStep1.bind(this)} />;
+      return <Step1 quizLength={quizLength}
+                    handleSubmit={this.renderStep2.bind(this)} />;
     } else if (step === 2) {
       return <Step2 quizLength={quizLength}
-                    handleSubmit={this.submitStep2.bind(this)} />;
+                    quizQuestions={quizQuestions}
+                    handleCancel={this.renderStep1.bind(this)}
+                    handleSubmit={this.renderStep3.bind(this)} />;
     }
   }
 }
