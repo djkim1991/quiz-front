@@ -3,8 +3,14 @@ import { IoChevronBackSharp } from 'react-icons/io5';
 
 
 function BackIcon(props) {
+  const handleClick = () => {
+    if (props.handleClick) {
+      props.handleClick();
+    }
+  };
+
   return (
-    <div id="gnbBackBtn" className="back-icon" onClick={() => props.handleClick()}>
+    <div className="back-icon" onClick={handleClick}>
       <IoChevronBackSharp />
     </div>
   );

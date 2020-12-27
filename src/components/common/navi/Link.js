@@ -2,7 +2,7 @@ import React from 'react';
 
 function Link(props) {
   const handleClick = () => {
-    if(props.to) {
+    if (props.to) {
       window.location.href = props.to;
     }
   };

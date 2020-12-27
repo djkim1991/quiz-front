@@ -1,8 +1,7 @@
 import React from 'react';
 import Logo from "./components/Logo";
-
-import './styles/home.css';
 import CreateQuizBtn from "./components/CreateQuizBtn";
+import './styles/home.css';
 
 function Home() {
   return (
