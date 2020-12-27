@@ -1,46 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
 import LeftArrowIcon from "../../../../common/icons/LeftArrowIcon";
 import RightArrowIcon from "../../../../common/icons/RightArrowIcon";
 
-class QuestionCount extends Component {
-  constructor(props) {
-    super(props);
+function QuestionCount(props) {
+  const quizLength = props.quizLength;
+  const minQuizLength = 1;
+  const maxQuizLength = 5;
+  const disabledDecrease = quizLength <= minQuizLength;
+  const disabledIncrease = quizLength >= maxQuizLength;
 
-    this.state = {
-      quizCount: 1,
-    };
-
-    this.minQuizCount = 1;
-    this.maxQuizCount = 5;
-  }
-
-  increaseCount() {
-    const { quizCount } = this.state;
-    if (quizCount < this.maxQuizCount) {
-      this.setState({ quizCount: quizCount + 1 });
+  const decreaseQuizLength = () => {
+    if(!disabledDecrease) {
+      props.decreaseQuizLength();
     }
-  }
+  };
 
-  decreaseCount() {
-    const { quizCount } = this.state;
-    if (quizCount > this.minQuizCount) {
-      this.setState({quizCount: quizCount - 1});
+  const increaseQuizLength = () => {
+    if(!disabledIncrease) {
+      props.increaseQuizLength();
     }
-  }
+  };
 
-  render() {
-    const { quizCount } = this.state;
-
-    return (
-      <div className="question-count">
-        <LeftArrowIcon disabled={quizCount <= this.minQuizCount}
-                       handleClick={this.decreaseCount.bind(this)} />
-        <div className="count"><span>{quizCount}</span></div>
-        <RightArrowIcon disabled={quizCount >= this.maxQuizCount}
-                        handleClick={this.increaseCount.bind(this)} />
+  return (
+    <div className="question-count">
+      <LeftArrowIcon disabled={disabledDecrease}
+                     handleClick={decreaseQuizLength} />
+      <div className="count">
+        <span>{quizLength}</span>
       </div>
-    );
-  }
+      <RightArrowIcon disabled={disabledIncrease}
+                      handleClick={increaseQuizLength} />
+    </div>
+  );
 }
 
 export default QuestionCount;

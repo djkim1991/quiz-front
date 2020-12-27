@@ -1,9 +1,9 @@
 import React from 'react';
 
-function NextBtn() {
+function NextBtn(props) {
   return (
     <div className="btn-type1">
-      <button>다음(1/4)</button>
+      <button onClick={() => props.handleSubmit()}>퀴즈 만들기 시작</button>
     </div>
   );
 }
