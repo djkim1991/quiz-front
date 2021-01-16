@@ -26,7 +26,7 @@ class CreateQuiz extends Component {
       displayText: '',
       displayOrder: (idx+1),
       quizAnswers: [
-        { displayText: '', displayOrder: 1, answerYn: false },
+        { displayText: '', displayOrder: 1, answerYn: true },
         { displayText: '', displayOrder: 2, answerYn: false },
         { displayText: '', displayOrder: 3, answerYn: false },
         { displayText: '', displayOrder: 4, answerYn: false },

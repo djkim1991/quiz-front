@@ -27,13 +27,45 @@ class Step2 extends Component {
 
   cursorNextQuestion() {
     const { quizCursor, quizLength } = this.state;
-    const nextQuizCursor = quizCursor + 1;
 
-    if (nextQuizCursor === quizLength) {
+    const isLast = this.moveToNextQuestion();
+
+    if (isLast) {
       this.props.handleSubmit();
-    } else {
-      this.setState({ quizCursor: nextQuizCursor });
     }
+  }
+
+  moveToNextQuestion() {
+    const { quizCursor, quizQuestions, quizLength } = this.state;
+    const currentQuestion = quizQuestions[quizCursor];
+
+    const isValid = this.isValidQuestion(currentQuestion);
+    if(!isValid) {
+      return;
+    }
+
+    const nextQuizCursor = quizCursor + 1;
+    if (nextQuizCursor === quizLength) {
+      return true;
+    }
+
+    this.setState({ quizCursor: nextQuizCursor });
+  }
+
+  isValidQuestion(question) {
+    const invalidQuestion = question.displayText === '';
+    if(invalidQuestion) {
+      alert('질문을 입력해 주세요');
+      return false;
+    }
+
+    const invalidAnswer = question.quizAnswers.find(answer => answer.displayText === '');
+    if(invalidAnswer) {
+      alert('선택지를 모두 입력해 주세요');
+      return false;
+    }
+
+    return true;
   }
 
   setQuestionDisplayText(displayText) {
