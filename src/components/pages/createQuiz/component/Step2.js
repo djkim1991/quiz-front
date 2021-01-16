@@ -26,8 +26,6 @@ class Step2 extends Component {
   }
 
   cursorNextQuestion() {
-    const { quizCursor, quizLength } = this.state;
-
     const isLast = this.moveToNextQuestion();
 
     if (isLast) {
