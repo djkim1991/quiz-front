@@ -10,6 +10,7 @@ function AnswerInputs(props) {
         quizAnswers.map((quizAnswer, idx) =>
           <AnswerInput key={idx}
                        quizAnswer={quizAnswer}
+                       handleClick={props.handleClick}
                        handleChange={props.handleChange} />)
       }
     </div>

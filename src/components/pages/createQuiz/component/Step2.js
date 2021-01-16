@@ -26,8 +26,14 @@ class Step2 extends Component {
   }
 
   cursorNextQuestion() {
-    const { quizCursor } = this.state;
-    this.setState({ quizCursor: quizCursor + 1 });
+    const { quizCursor, quizLength } = this.state;
+    const nextQuizCursor = quizCursor + 1;
+
+    if (nextQuizCursor === quizLength) {
+      this.props.handleSubmit();
+    } else {
+      this.setState({ quizCursor: nextQuizCursor });
+    }
   }
 
   setQuestionDisplayText(displayText) {
@@ -46,6 +52,15 @@ class Step2 extends Component {
     this.setState({ quizQuestions });
   }
 
+  setAnswerYn(displayOrder) {
+    const { quizCursor, quizQuestions } = this.state;
+    quizQuestions[quizCursor].quizAnswers
+      .forEach(quizAnswer => {
+        quizAnswer.answerYn = (quizAnswer.displayOrder === displayOrder) ? !quizAnswer.answerYn : false;
+      });
+
+    this.setState({ quizQuestions });
+  }
 
   render() {
     const {quizLength, quizCursor, quizQuestions} = this.state;
@@ -58,6 +73,7 @@ class Step2 extends Component {
         <QuestionInput displayText={quizQuestion.displayText}
                        handleChange={this.setQuestionDisplayText.bind(this)} />
         <AnswerInputs quizAnswers={quizQuestion.quizAnswers}
+                      handleClick={this.setAnswerYn.bind((this))}
                       handleChange={this.setAnswerDisplayText.bind(this)} />
         <PrevNextBtn handleClickPrev={this.cursorPrevQuestion.bind(this)}
                      handleClickNext={this.cursorNextQuestion.bind(this)}

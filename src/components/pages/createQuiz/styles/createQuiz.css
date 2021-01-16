@@ -27,7 +27,7 @@ div.question-input textarea { box-sizing: border-box; width: 80vw; height: 40vw;
 div.answer-inputs { text-align: center; }
 div.answer-input { position: relative; display: inline-block; width: 80vw; height: 20vw; padding: 2vw 0; }
 div.answer-input div.checkbox-icon { position: absolute; top: 60%; left: 2vw; transform: translateY(-60%); font-size: 8vw; color: #DDD; }
-div.answer-input div.checkbox-icon.on { color: orangered; }
+div.answer-input.on div.checkbox-icon { color: orangered; }
 div.answer-input input { box-sizing: border-box; width: 80vw; height: 16vw; padding-left: 15vw; font-size: 4vw; }
 
 @media screen and (min-width:600px) {

@@ -10,9 +10,14 @@ function AnswerInput(props) {
     props.handleChange(displayOrder, displayText);
   };
 
+  const handleClick = () => {
+    console.log(displayOrder);
+    props.handleClick(displayOrder);
+  };
+
   return (
     <div className={`answer-input ${answerYn ? 'on' : ''}`}>
-      <CheckboxIcon />
+      <CheckboxIcon handleClick={handleClick} />
       <input type="text"
              value={displayText}
              onChange={handleChange}

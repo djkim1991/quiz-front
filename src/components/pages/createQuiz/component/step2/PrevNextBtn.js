@@ -1,7 +1,6 @@
 import React from 'react';
 
 function PrevNextBtn(props) {
-  const { quizLength, quizCursor } = props;
 
   return (
     <div className="btn-type2">

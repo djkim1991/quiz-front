@@ -4,6 +4,7 @@ a, span, button, input, textarea { font-family: 'Noto Sans KR', sans-serif; colo
 button { border: none; }
 div { box-sizing: border-box; }
 html, body, div#root, div.layout, div.main { margin: 0; padding: 0; width: 100%; min-height: 100vh; }
+body.scroll-lock { overflow: hidden; }
 
 div#root { background-color: #EEE; text-align: center; }
 div.layout, div.gnb, div.footer { width: 100%; max-width: 600px; }
@@ -31,4 +32,26 @@ div.btn-type2 { display: flex; justify-content: center; position: absolute; bott
 div.btn-type2 button { font-size: 4vw; color: #FFF; background-color: orangered; width: 39vw; margin: 0 1vw 0 1vw; height: 17vw; font-weight: 900; color: #FFF; border-radius: 1vw; }
 @media screen and (min-width:600px){
     div.btn-type2 button { height: 102px; border-radius: 6px; font-size: 24px; width: 234px; margin: 0 6px 0 6px; }
+}
+
+/*팝업 공통*/
+div.dimmed-layer { position: fixed; top:0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 600px; height: 100%; background-color: #00000088; z-index: 9; }
+div.popup { position: fixed; top:50%; left: 50%; transform: translate(-50%, -50%); max-width: 600px; background-color: #FFF; z-index: 10; }
+
+/*팝업-prompt*/
+div.popup.prompt { width: 85vw; height: 80vw; background: none; }
+div.popup.prompt div.text { padding-top: 20vw; height: 80%; background-color: cornsilk; border-top-left-radius: 5vw; border-top-right-radius: 5vw; border: 1px solid #888; border-bottom: none; }
+div.popup.prompt div.text span { font-size: 5vw; }
+div.popup.prompt div.buttons { height: 20%; background: none; }
+div.popup.prompt div.buttons span { font-size: 4vw; }
+div.popup.prompt div.buttons button { width: 50%; height: 100%; border: 1px solid #CCC; }
+div.popup.prompt div.buttons button:first-child { border-bottom-left-radius: 5vw; background-color: #FFF; color: royalblue; }
+div.popup.prompt div.buttons button:last-child { border-left: none;  border-bottom-right-radius: 5vw; background-color: #FFF; color: orangered; }
+@media screen and (min-width:600px){
+    div.popup.prompt { width: 510px; height: 480px; }
+    div.popup.prompt div.text { padding-top: 120px; border-top-left-radius: 30px; border-top-right-radius: 30px; }
+    div.popup.prompt div.text span { font-size: 30px; }
+    div.popup.prompt div.buttons span { font-size: 24px; }
+    div.popup.prompt div.buttons button:first-child { border-bottom-left-radius: 30px; }
+    div.popup.prompt div.buttons button:last-child { border-bottom-right-radius: 30px; }
 }

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './styles/createQuiz.css';
 import Step1 from "./component/Step1";
 import Step2 from "./component/Step2";
+import Step3 from "./component/Step3";
+import Prompt from "../../common/popup/Prompt";
 
 class CreateQuiz extends Component {
   constructor(props) {
@@ -11,6 +13,7 @@ class CreateQuiz extends Component {
       step: 1,
       quizLength: 1,
       quizQuestions: [],
+      popupType: null,
     };
   }
 
@@ -30,14 +33,33 @@ class CreateQuiz extends Component {
       ]
     }));
 
-    this.setState({ step: 2, quizLength, quizQuestions });
+    this.setState({ step: 2, popupType: null, quizLength, quizQuestions });
+  }
+
+  renderPrompt() {
+    this.setState({ popupType: 'prompt' });
   }
 
   renderStep3() {
-    this.setState({ step: 3 });
+    this.setState({ step: 3, popupType: null });
   }
 
-  render() {
+  closePopup() {
+    this.setState({ popupType: null });
+  }
+
+  renderPopup() {
+    const { popupType } = this.state;
+    if (popupType === 'prompt') {
+      return <Prompt text="퀴즈를 생성하시겠습니까?"
+                     handleCancel={this.closePopup.bind(this)}
+                     handleSubmit={this.renderStep3.bind(this)} />
+    }
+
+    return null;
+  }
+
+  renderStep() {
     const { step, quizLength, quizQuestions } = this.state;
     if (step === 1) {
       return <Step1 quizLength={quizLength}
@@ -46,8 +68,19 @@ class CreateQuiz extends Component {
       return <Step2 quizLength={quizLength}
                     quizQuestions={quizQuestions}
                     handleCancel={this.renderStep1.bind(this)}
-                    handleSubmit={this.renderStep3.bind(this)} />;
+                    handleSubmit={this.renderPrompt.bind(this)} />;
+    } else if (step === 3) {
+      return <Step3 />;
     }
+  }
+
+  render() {
+    return (
+      <div>
+        {this.renderStep()}
+        {this.renderPopup()}
+      </div>
+    );
   }
 }
 
