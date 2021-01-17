@@ -6,11 +6,20 @@ div { box-sizing: border-box; }
 html, body, div#root, div.layout, div.main { margin: 0; padding: 0; width: 100%; min-height: 100vh; }
 body.scroll-lock { overflow: hidden; }
 
+/*배경 css 패턴*/
+.background-pattern-01 {
+    background: #FFF;
+    background-image: radial-gradient(#EEE 5%, transparent 0), radial-gradient(#EEE 5%, transparent 0);
+    background-position: 0 0, 50px 50px;
+    background-size: 80px 80px;
+}
+
+/*기본 레이어*/
 div#root { background-color: #EEE; text-align: center; }
 div.layout, div.gnb, div.footer { width: 100%; max-width: 600px; }
 div.layout { display: inline-block; border: 1px solid #CCC; }
 div.gnb { position: fixed; top: 0; left: 50%; transform: translateX(-50%); font-weight: 700; height: 60px; border: 1px solid #CCC; border-bottom: 1px solid #444;  background-color: #FFF; z-index: 10; }
-div.main { position: relative; padding-top: 60px; max-width: 600px; background-color: #FFF; padding-bottom: calc(17vw + 80px); }
+div.main { position: relative; padding-top: 60px; max-width: 600px; padding-bottom: calc(17vw + 80px); }
 div.footer { background-color: #DDD; height: 100px; text-align: left; padding: 10px; }
 
 @media screen and (min-width:600px){
