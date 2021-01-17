@@ -1,10 +1,9 @@
 import React from 'react';
+import FloatBottomBtn from "../../../../common/button/FloatBottomBtn";
 
 function NextBtn(props) {
   return (
-    <div className="btn-type1">
-      <button onClick={() => props.handleSubmit()}>퀴즈 만들기 시작</button>
-    </div>
+    <FloatBottomBtn handleClick={props.handleSubmit} text="퀴즈 만들기 시작" />
   );
 }
 

@@ -1,13 +1,9 @@
 import React from 'react';
-import Link from "../../../common/navi/Link";
+import FloatBottomBtn from "../../../common/button/FloatBottomBtn";
 
 function CreateQuizBtn() {
   return (
-    <div className="btn-type1">
-      <Link to="/createQuiz">
-        퀴즈 만들기
-      </Link>
-    </div>
+    <FloatBottomBtn to="/createQuiz" text="퀴즈 만들기" />
   );
 }
 

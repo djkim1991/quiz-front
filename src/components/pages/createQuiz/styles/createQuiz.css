@@ -1,13 +1,13 @@
 div.create-quiz-step1 div.title { padding: 20vw 0; }
 div.create-quiz-step1 div.title span { font-size: 5vw; font-weight: 700; }
 
-div.question-count { display: flex; justify-content: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); align-items: center; padding: 15vw 0; }
-div.question-count div.right-arrow-icon,
-div.question-count div.left-arrow-icon { font-size: 7vw; color: orangered; }
-div.question-count div.right-arrow-icon.disabled,
-div.question-count div.left-arrow-icon.disabled { color: #FFF; }
-div.question-count div.count { background-color: orangered; width: 20vw; height: 20vw; border-radius: 1vw; }
-div.question-count div.count span { font-size: 12vw; color: #FFF; font-weight: 900; }
+div.question-count { display: flex; justify-content: center; align-items: center; padding-top: 2vw; }
+div.question-count div.minus-circle-icon,
+div.question-count div.plus-circle-icon { font-size: 15vw; color: orangered; }
+div.question-count div.minus-circle-icon.disabled,
+div.question-count div.plus-circle-icon.disabled { color: #CCC; }
+div.question-count div.count { width: 30vw; height: 36vw; border-radius: 1vw; }
+div.question-count div.count span { font-size: 20vw; font-weight: 600; }
 
 @media screen and (min-width:600px) {
     div.create-quiz-step1 div.title { padding: 120px 0; }

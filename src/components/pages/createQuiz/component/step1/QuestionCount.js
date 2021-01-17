@@ -1,6 +1,8 @@
 import React from 'react';
 import LeftArrowIcon from "../../../../common/icons/LeftArrowIcon";
 import RightArrowIcon from "../../../../common/icons/RightArrowIcon";
+import PlusCircleIcon from "../../../../common/icons/PlusCircleIcon";
+import MinusCircleIcon from "../../../../common/icons/MinusCircleIcon";
 
 function QuestionCount(props) {
   const quizLength = props.quizLength;
@@ -23,12 +25,12 @@ function QuestionCount(props) {
 
   return (
     <div className="question-count">
-      <LeftArrowIcon disabled={disabledDecrease}
+      <MinusCircleIcon disabled={disabledDecrease}
                      handleClick={decreaseQuizLength} />
       <div className="count">
         <span>{quizLength}</span>
       </div>
-      <RightArrowIcon disabled={disabledIncrease}
+      <PlusCircleIcon disabled={disabledIncrease}
                       handleClick={increaseQuizLength} />
     </div>
   );
