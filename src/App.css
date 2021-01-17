@@ -40,7 +40,7 @@ div.popup { position: fixed; top:50%; left: 50%; transform: translate(-50%, -50%
 
 /*팝업-prompt*/
 div.popup.prompt { width: 85vw; height: 80vw; background: none; }
-div.popup.prompt div.text { padding-top: 20vw; height: 80%; background-color: cornsilk; border-top-left-radius: 5vw; border-top-right-radius: 5vw; border: 1px solid #888; border-bottom: none; }
+div.popup.prompt div.text { padding-top: 20vw; height: 80%; background-color: cornsilk; border-top-left-radius: 5vw; border-top-right-radius: 5vw; border: 1px solid #CCC; border-bottom: none; }
 div.popup.prompt div.text span { font-size: 5vw; }
 div.popup.prompt div.buttons { height: 20%; background: none; }
 div.popup.prompt div.buttons span { font-size: 4vw; }
