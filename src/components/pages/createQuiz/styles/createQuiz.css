@@ -13,11 +13,11 @@ div.question-count div.count span { font-size: 20vw; font-weight: 600; }
     div.create-quiz-step1 div.title { padding: 120px 0; }
     div.create-quiz-step1 div.title span { font-size: 30px; }
 
-    div.question-count { padding: 90px 0; }
-    div.question-count div.right-arrow-icon,
-    div.question-count div.left-arrow-icon { font-size: 42px; }
-    div.question-count div.count { width: 120px; height: 120px; border-radius: 6px; }
-    div.question-count div.count span { font-size: 72px; }
+    div.question-count { padding: 12px 0; }
+    div.question-count div.minus-circle-icon,
+    div.question-count div.plus-circle-icon { font-size: 90px; }
+    div.question-count div.count { width: 180px; height: 216px; }
+    div.question-count div.count span { font-size: 120px; }
 }
 
 div.question-num { padding: 5vw 0 2vw 10vw; text-align: left; }
