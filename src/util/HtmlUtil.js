@@ -26,7 +26,7 @@ class HtmlUtil {
       return false;
     }
 
-    domElement.className = domElement.className.replace(className, '');
+    domElement.className = domElement.className.replace(className, '').trim();
 
     return true;
   }

@@ -3,7 +3,6 @@ import HtmlUtil from "../../../util/HtmlUtil";
 
 class DimmedLayer extends Component {
   componentDidMount() {
-    HtmlUtil.addClass(window.document.body, 'test');
     HtmlUtil.addClass(window.document.body, 'scroll-lock');
   }
 
