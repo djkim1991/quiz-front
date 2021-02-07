@@ -3,7 +3,7 @@ div.create-quiz-step1 div.title span { font-size: 5vw; font-weight: 700; }
 
 div.question-count { display: flex; justify-content: center; align-items: center; padding-top: 2vw; }
 div.question-count div.minus-circle-icon,
-div.question-count div.plus-circle-icon { font-size: 15vw; color: orangered; }
+div.question-count div.plus-circle-icon { font-size: 15vw; color: #F1EC40; }
 div.question-count div.minus-circle-icon.disabled,
 div.question-count div.plus-circle-icon.disabled { color: #CCC; }
 div.question-count div.count { width: 30vw; height: 36vw; border-radius: 1vw; }
@@ -21,13 +21,13 @@ div.question-count div.count span { font-size: 20vw; font-weight: 600; }
 }
 
 div.question-num { padding: 5vw 0 2vw 10vw; text-align: left; }
-div.question-num span { padding: 1vw 5vw 2vw 5vw; border-radius: 1vw; color: orangered; border: 1px solid orangered; }
+div.question-num span { padding: 1vw 5vw 2vw 5vw; border-radius: 1vw; color: #F1EC40; border: 1px solid #F1EC40; }
 div.question-input { padding: 1vw 0; }
 div.question-input textarea { box-sizing: border-box; width: 80vw; height: 40vw; text-align: center; padding-top: 8vw; font-size: 5vw; }
 div.answer-inputs { text-align: center; }
 div.answer-input { position: relative; display: inline-block; width: 80vw; height: 20vw; padding: 2vw 0; }
-div.answer-input div.checkbox-icon { position: absolute; top: 60%; left: 2vw; transform: translateY(-60%); font-size: 8vw; color: #DDD; }
-div.answer-input.on div.checkbox-icon { color: orangered; }
+div.answer-input div.checkbox-icon { position: absolute; top: 60%; left: 2vw; transform: translateY(-60%); font-size: 8vw; color: #555; }
+div.answer-input.on div.checkbox-icon { color: #F1EC40; }
 div.answer-input input { box-sizing: border-box; width: 80vw; height: 16vw; padding-left: 15vw; font-size: 4vw; }
 
 @media screen and (min-width:600px) {

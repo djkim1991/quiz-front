@@ -1,24 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 * { outline: none; }
-a, span, button, input, textarea { font-family: 'Noto Sans KR', sans-serif; color: #444; font-size: 18px; text-decoration: none; }
+a, span, button, input, textarea { font-family: 'Noto Sans KR', sans-serif; color: #FFF; font-size: 18px; text-decoration: none; }
+input, textarea { background-color: #121212; border: 1px solid #121212; border-bottom-color: #FFF; }
+button { color: #121212; }
 button { border: none; }
 div { box-sizing: border-box; }
 html, body, div#root, div.layout, div.main { margin: 0; padding: 0; width: 100%; min-height: 100vh; }
-html { background-color: #EEE; }
+html { background-color: #FFF; }
 body.scroll-lock { overflow: hidden; }
 
-/*배경 css 패턴*/
-.background-pattern-01 {
-    background: #FFF;
-    background-image: radial-gradient(#EEE 5%, transparent 0), radial-gradient(#EEE 5%, transparent 0);
-    background-position: 0 0, 50px 50px;
-    background-size: 80px 80px;
-}
-
 /*기본 레이어*/
-div#root { background-color: #EEE; text-align: center; }
+div#root { background-color: #121212; text-align: center; }
 div.layout, div.gnb, div.footer { width: 100%; max-width: 600px; }
-div.layout { display: inline-block; border: 1px solid #CCC; }
+div.layout { display: inline-block; }
 div.gnb { position: fixed; top: 0; left: 50%; transform: translateX(-50%); font-weight: 700; height: 60px; border: 1px solid #CCC; border-bottom: 1px solid #444;  background-color: #FFF; z-index: 10; }
 div.main { position: relative; padding-top: 60px; max-width: 600px; padding-bottom: calc(17vw + 80px); }
 div.footer { background-color: #DDD; height: 100px; text-align: left; padding: 10px; }
@@ -28,7 +23,7 @@ div.footer { background-color: #DDD; height: 100px; text-align: left; padding: 1
 }
 
 div.gnb > div.back-icon { position: fixed; top: 0px; left: 0px; font-size: 30px; height: 60px; width: 60px; padding: 15px; cursor: pointer; z-index: 100; }
-div.gnb > span.logo { font-size: 20px; line-height: 55px; }
+div.gnb > span.logo { font-size: 20px; line-height: 55px; color: #121212; }
 
 /*버튼-01*/
 body.has-btn-type1 {
@@ -38,7 +33,7 @@ body.has-btn-type1 {
 div.btn-type1 { box-sizing: border-box; position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 600px; background-color: #FFF; }
 div.btn-type1 { padding: 0 0 calc(env(safe-area-inset-bottom)) 0; }
 div.btn-type1 { padding: 0 0 calc(constant(safe-area-inset-bottom)) 0; }
-div.btn-type1 button { font-size: 4vw; color: #FFF; background-color: orangered; width: 100%; height: 20vw; font-weight: 900; color: #FFF; }
+div.btn-type1 button { font-size: 4vw; color: #121212; background-color: #F1EC40; width: 100%; height: 20vw; font-weight: 900; }
 @media screen and (min-width:600px){
     body.has-btn-type1 { padding-bottom: 100px; }
     div.btn-type1 button { height: 100px; font-size: 24px; }
@@ -46,7 +41,7 @@ div.btn-type1 button { font-size: 4vw; color: #FFF; background-color: orangered;
 
 /*버튼-02*/
 div.btn-type2 { display: flex; justify-content: center; position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); width: 100%; max-width: 600px; }
-div.btn-type2 button { font-size: 4vw; color: #FFF; background-color: orangered; width: 39vw; margin: 0 1vw 0 1vw; height: 17vw; font-weight: 900; color: #FFF; border-radius: 1vw; }
+div.btn-type2 button { font-size: 4vw; color: #121212; background-color: #F1EC40; width: 39vw; margin: 0 1vw 0 1vw; height: 17vw; font-weight: 900; border-radius: 1vw; }
 @media screen and (min-width:600px){
     div.btn-type2 button { height: 102px; border-radius: 6px; font-size: 24px; width: 234px; margin: 0 6px 0 6px; }
 }
@@ -57,13 +52,13 @@ div.popup { position: fixed; top:50%; left: 50%; transform: translate(-50%, -50%
 
 /*팝업-prompt*/
 div.popup.prompt { width: 85vw; height: 80vw; background: none; }
-div.popup.prompt div.text { padding-top: 20vw; height: 80%; background-color: cornsilk; border-top-left-radius: 5vw; border-top-right-radius: 5vw; border: 1px solid #CCC; border-bottom: none; }
+div.popup.prompt div.text { padding-top: 20vw; height: 80%; background-color: #121212; border-top-left-radius: 5vw; border-top-right-radius: 5vw; border: 1px solid #CCC; border-bottom: none; }
 div.popup.prompt div.text span { font-size: 5vw; }
 div.popup.prompt div.buttons { height: 20%; background: none; }
 div.popup.prompt div.buttons span { font-size: 4vw; }
 div.popup.prompt div.buttons button { width: 50%; height: 100%; border: 1px solid #CCC; }
-div.popup.prompt div.buttons button:first-child { border-bottom-left-radius: 5vw; background-color: #FFF; color: royalblue; }
-div.popup.prompt div.buttons button:last-child { border-left: none;  border-bottom-right-radius: 5vw; background-color: #FFF; color: orangered; }
+div.popup.prompt div.buttons button:first-child { border-bottom-left-radius: 5vw; background-color: #555; color: royalblue; }
+div.popup.prompt div.buttons button:last-child { border-left: none;  border-bottom-right-radius: 5vw; background-color: #555; color: #F1EC40; }
 @media screen and (min-width:600px){
     div.popup.prompt { width: 510px; height: 480px; }
     div.popup.prompt div.text { padding-top: 120px; border-top-left-radius: 30px; border-top-right-radius: 30px; }

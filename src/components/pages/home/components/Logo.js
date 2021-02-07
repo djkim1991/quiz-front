@@ -3,7 +3,9 @@ import React from 'react';
 function Logo() {
   return (
     <div className="logo">
-      <h1>QUIZ</h1>
+      <div>
+        <h1>QUIZ</h1>
+      </div>
     </div>
   );
 }

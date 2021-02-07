@@ -11,7 +11,7 @@ function QuizRouter() {
   return (
     <div className="layout">
       <Gnb />
-      <div className="main background-pattern-01">
+      <div className="main">
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/createQuiz" component={CreateQuiz} />
